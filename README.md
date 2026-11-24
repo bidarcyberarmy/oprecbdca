@@ -90,7 +90,7 @@ Seluruh konten profil, portofolio, daftar pengurus, daftar divisi, jadwal deadli
 
 ---
 
-## 4. Deploy ke Vercel (`oprec.bidarcyberarmy.org`)
+## 4. Deploy ke Vercel 
 
 1. Push repository ini ke GitHub (misalnya organisasi `bidarcyberarmy`).
 2. Buka [Vercel](https://vercel.com), klik **Add New → Project**, lalu import repository ini.
