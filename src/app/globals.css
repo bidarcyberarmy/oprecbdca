@@ -1,0 +1,137 @@
+@import "tailwindcss";
+
+:root {
+  color-scheme: light;
+  --paper: #f7faff;
+  --surface: #ffffff;
+  --surface-soft: #e7f3fc;
+  --surface-tint: #f2f7fe;
+  --ink: #101b31;
+  --muted: #485e7d;
+  --accent: #164fc2;
+  --accent-deep: #0c3687;
+  --accent-bright: #0054df;
+  --accent-cyan: #007891;
+  --button-teal: #076982;
+  --wash-blue: #dce9fc;
+  --wash-cyan: #e1f6fc;
+  --line: #d5e2f0;
+  --night: #101c33;
+  --night-soft: #1b3661;
+}
+
+@theme inline {
+  --color-paper: var(--paper);
+  --color-surface: var(--surface);
+  --color-surface-soft: var(--surface-soft);
+  --color-surface-tint: var(--surface-tint);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-accent: var(--accent);
+  --color-accent-deep: var(--accent-deep);
+  --color-accent-bright: var(--accent-bright);
+  --color-accent-cyan: var(--accent-cyan);
+  --color-line: var(--line);
+  --color-night: var(--night);
+  --font-sans: var(--font-plus-jakarta), ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-mono: var(--font-jetbrains-mono), ui-monospace, SFMono-Regular, monospace;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-text-size-adjust: 100%;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+button,
+a,
+[role="button"] {
+  touch-action: manipulation;
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+}
+
+@media (pointer: coarse) {
+  input,
+  textarea,
+  select {
+    font-size: 16px;
+  }
+}
+
+.pb-safe {
+  padding-bottom: max(1.25rem, env(safe-area-inset-bottom, 0px));
+}
+
+.pt-safe {
+  padding-top: env(safe-area-inset-top, 0px);
+}
+
+body {
+  color: var(--ink);
+  background-color: var(--paper);
+  min-height: 100vh;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+.bdca-hero-bg {
+  background:
+    radial-gradient(ellipse 36rem 21rem at 4% 0%, var(--wash-blue), transparent),
+    radial-gradient(ellipse 32rem 23rem at 100% 6rem, var(--wash-cyan), transparent),
+    var(--paper);
+}
+
+.bdca-daftar-bg {
+  background:
+    radial-gradient(ellipse 46rem 28rem at 6% 18%, rgba(208, 229, 254, 0.72), transparent 70%),
+    radial-gradient(ellipse 42rem 26rem at 96% 8%, rgba(209, 240, 252, 0.72), transparent 68%),
+    radial-gradient(ellipse 38rem 24rem at 92% 94%, rgba(214, 233, 254, 0.65), transparent 70%),
+    linear-gradient(180deg, var(--paper) 0%, #eef5fe 100%);
+}
+
+.bdca-defer-section {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 560px;
+}
+
+.bdca-button-primary {
+  color: #ffffff;
+  background: linear-gradient(110deg, var(--accent-deep), var(--accent-bright) 60%, var(--button-teal));
+  transition: background-color 140ms ease-out, opacity 140ms ease-out, transform 110ms ease-out;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .bdca-button-primary:hover:not(:disabled) {
+    background: var(--accent-deep);
+  }
+}
+
+.bdca-button-primary:active:not(:disabled) {
+  transform: scale(0.98);
+  background: var(--accent-deep);
+}
+
+.bdca-button-primary:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.bdca-display-accent {
+  background-image: linear-gradient(95deg, var(--accent-deep), var(--accent-bright) 56%, var(--accent-cyan));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
