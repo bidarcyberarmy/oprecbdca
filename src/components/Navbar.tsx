@@ -18,7 +18,7 @@ export function Navbar() {
   const isOpen = useRegistrationOpen();
 
   return (
-    <header className="pt-safe sticky top-0 z-40 border-b border-line bg-paper">
+    <header className="pt-safe relative z-40 bg-transparent">
       <div className="mx-auto flex min-h-18 max-w-[1280px] items-center justify-between gap-4 px-5 sm:px-8">
         <Link
           href="/"
@@ -119,7 +119,7 @@ export function Navbar() {
         <nav
           id="mobile-navigation"
           aria-label="Navigasi mobile"
-          className="border-t border-line bg-paper px-5 py-4 lg:hidden"
+          className="mx-4 mb-2 rounded-[0.85rem] border border-line bg-surface px-5 py-4 shadow-[0_12px_28px_-12px_rgba(16,27,49,0.16)] lg:hidden"
         >
           <div className="flex flex-col divide-y divide-line">
             {NAV_ITEMS.map((item) =>

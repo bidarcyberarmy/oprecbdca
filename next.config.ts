@@ -6,13 +6,17 @@ const scriptSrc = isProd
   ? "script-src 'self' 'unsafe-inline'"
   : "script-src 'self' 'unsafe-inline' 'unsafe-eval'";
 
+const connectSrc = isProd
+  ? "connect-src 'self' https://*.supabase.co wss://*.supabase.co"
+  : "connect-src 'self' ws: wss: https://*.supabase.co wss://*.supabase.co";
+
 const contentSecurityPolicy = [
   "default-src 'self'",
   scriptSrc,
   "style-src 'self' 'unsafe-inline'",
   "img-src 'self' data: blob: https://www.bidarcyberarmy.org https://bidarcyberarmy.org",
   "font-src 'self' data:",
-  "connect-src 'self' https://*.supabase.co wss://*.supabase.co",
+  connectSrc,
   "frame-ancestors 'none'",
   "base-uri 'self'",
   "form-action 'self'",

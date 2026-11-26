@@ -13,9 +13,11 @@ export default function HomePage() {
       >
         Langsung ke konten utama
       </a>
-      <Navbar />
-      <main id="konten-utama">
+      <div className="bdca-hero-bg">
+        <Navbar />
         <HeroSection />
+      </div>
+      <main id="konten-utama">
         <AboutSection />
         <DivisionExplorer />
       </main>

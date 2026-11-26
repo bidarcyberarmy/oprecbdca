@@ -2,8 +2,8 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { CheckCircle2, ChevronDown, GraduationCap } from "lucide-react";
-import { oprecConfig, type Division } from "@/config/oprec.config";
+import { CheckCircle2, ChevronDown, GraduationCap, Headphones } from "lucide-react";
+import { BDCA_LINKS, oprecConfig, type Division } from "@/config/oprec.config";
 import { useRegistrationOpen } from "@/lib/use-registration-open";
 
 function DivisionDetailContent({
@@ -202,6 +202,25 @@ export function DivisionExplorer() {
               </div>
             );
           })}
+        </div>
+
+        <div className="mt-8 flex flex-col gap-3 rounded-[0.85rem] border border-line bg-surface px-5 py-4 sm:flex-row sm:items-center sm:justify-between">
+          <div className="flex items-center gap-3">
+            <span className="inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-surface-soft text-accent">
+              <Headphones className="h-4 w-4" aria-hidden="true" />
+            </span>
+            <p className="text-sm text-muted">
+              Kendala pendaftaran? Hubungi panitia via WhatsApp.
+            </p>
+          </div>
+          <a
+            href={BDCA_LINKS.panitiaWhatsappUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex min-h-10 shrink-0 items-center justify-center rounded-[0.55rem] border border-line bg-surface-tint px-4 text-xs font-bold text-accent transition-colors hover:border-accent sm:text-sm"
+          >
+            Hubungi {BDCA_LINKS.panitiaWhatsappDisplay}
+          </a>
         </div>
       </div>
     </section>

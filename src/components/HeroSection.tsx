@@ -9,7 +9,7 @@ export function HeroSection() {
   const isOpen = useRegistrationOpen();
 
   return (
-    <section className="bdca-hero-bg relative overflow-hidden border-b border-line">
+    <section className="relative overflow-hidden border-b border-line">
       <div className="mx-auto max-w-[1280px] px-5 pt-12 pb-14 sm:px-8 sm:pt-18 sm:pb-20">
         <div className="max-w-3xl">
           <div className="inline-flex flex-wrap items-center gap-2.5 rounded-[0.55rem] border border-line bg-surface px-3.5 py-2 text-xs font-semibold text-ink">
