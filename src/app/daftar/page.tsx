@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowLeft, Calendar } from "lucide-react";
+import { BookOpen, Calendar } from "lucide-react";
 import { RegistrationForm } from "@/components/RegistrationForm";
 import { oprecConfig } from "@/config/oprec.config";
 
@@ -40,8 +40,9 @@ export default function DaftarPage() {
               href="/"
               className="inline-flex min-h-11 items-center gap-1.5 text-sm font-semibold text-accent transition-colors hover:text-accent-deep"
             >
-              <ArrowLeft className="h-4 w-4" aria-hidden="true" />
-              <span>Kembali</span>
+              <BookOpen className="h-4 w-4" aria-hidden="true" />
+              <span className="sm:hidden">Info BDCA</span>
+              <span className="hidden sm:inline">Info BDCA &amp; Divisi</span>
             </Link>
           </div>
 
