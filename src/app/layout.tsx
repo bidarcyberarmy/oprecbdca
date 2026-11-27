@@ -1,6 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { JetBrains_Mono, Plus_Jakarta_Sans } from "next/font/google";
-import { Analytics } from "@vercel/analytics/next";
+import { VercelAnalytics } from "@/components/VercelAnalytics";
 import "./globals.css";
 
 export const viewport: Viewport = {
@@ -54,7 +54,7 @@ export default function RootLayout({
     <html lang="id" className={`${plusJakartaSans.variable} ${jetBrainsMono.variable}`}>
       <body className="font-sans antialiased">
         {children}
-        <Analytics />
+        <VercelAnalytics />
       </body>
     </html>
   );
